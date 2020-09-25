@@ -1,0 +1,61 @@
+@import "../../styles/myStyles";
+
+.card {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $base-color;
+    height: 27em;
+    width: 18em;
+
+    border-radius: 10px;
+
+    &__img {
+
+        position: relative;
+        top: -1.5em;
+        height: 10em;
+        width: inherit;
+        background-color: $second-color;
+        border-radius: 10px 10px 0 0;
+    }
+
+    &__description {
+
+        font-family: 'Open sans', sans-serif;
+
+        h6 {
+            color: $third-color;
+            font-weight: 300;
+            font-size: .7em;
+            margin-bottom: .5em;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 1.8em;
+            color: $fourth-color;
+            text-transform: capitalize;
+            margin-bottom: .5em;
+
+        }
+
+        p {
+            height: 7em;
+            width: 15em;
+            color: $third-color;
+        }
+
+        button {
+            position: relative;
+            font-size: .7em;
+            padding: 1em 2em;
+            color: $base-color;
+            background-color: $third-color;
+            border-radius: 5px;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.home {
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;0,800;1,300&display=swap');
+    position: relative;
+    right: 25%;
+    top: 20%;
+    font-family: "Open Sans", sans-serif;
+
+    .title h1 {
+        position: relative;
+        top: 1em;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 3rem;
+        color: #52616b;
+    }
+
+    .school h1 {
+        position: relative;
+        top: 0.8em;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 3rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: #c9d6df;
+
+    }
+
+    .desc h1 {
+        position: relative;
+        top: 0.6em;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-size: 3rem;
+        letter-spacing: 0.1em;
+        font-style: italic;
+        text-transform: uppercase;
+        color: #52616b;
+    }
+
+
+    
+
+}

@@ -1,0 +1,64 @@
+$themes: (
+    dark: (
+        fgColor: get-color($dark, base, fg),
+        fgStrong: get-color($dark, base, fg-dark),
+        bgColor: get-color($dark, base, bg),
+        bgPanel: get-color($dark, base, panel),
+
+        primary: get-color($dark, base, primary),
+        primaryColor: get-color($dark, base, primary),
+        secondary: get-color($dark, base, secondary),
+        secondaryColor: get-color($dark, base, secondary),
+        confirmColor: get-color($dark, common, confirm),
+        successColor: get-color($dark, common, success),
+        warningColor: get-color($dark, common, warning),
+        errorColor: get-color($dark, common, error),
+    ),
+    light: (
+        fgColor: get-color($light, base, fg),
+        bgColor: get-color($light, base, bg),
+        bgPanel: get-color($light, base, panel),
+
+        primary: get-color($light, base, primary),
+        primaryColor: get-color($light, base, primary),
+        confirmColor: get-color($light, common, confirm),
+        successColor: get-color($light, common, success),
+        warningColor: get-color($light, common, warning),
+        errorColor: get-color($light, common, error),
+    )
+);
+
+/*
+Use on parent elements, like body.
+*/
+@mixin themifyParent($themes) {
+    @each $theme, $map in $themes {
+        &.#{$theme} {
+            $theme-map: () !global;
+            @each $key, $submap in $map {
+                $value: map-get(map-get($themes, $theme), '#{$key}');
+                $theme-map: map-merge($theme-map, ($key: $value)) !global;
+            }
+            @content;
+            $theme-map: null !global;
+        }
+    }
+}
+
+@mixin themify($themes) {
+    @each $theme, $map in $themes {
+        .#{$theme} & {
+            $theme-map: () !global;
+            @each $key, $submap in $map {
+                $value: map-get(map-get($themes, $theme), '#{$key}');
+                $theme-map: map-merge($theme-map, ($key: $value)) !global;
+            }
+            @content;
+            $theme-map: null !global;
+        }
+    }
+}
+
+@function themed($key) {
+    @return map-get($theme-map, $key);
+}

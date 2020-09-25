@@ -1,0 +1,45 @@
+<div id="app" class="background-rec">
+  <Navbar>
+    <header id="nav" slot="menu">
+      <a href="/"><img id="nav-logo" src="../../assets/logo.png" alt="logo" /></a>
+      <ul>
+        <li>
+          <router-link to="#">About</router-link>
+        </li>
+        <li>
+          <router-link to="#">Portfolio</router-link>
+        </li>
+        <li>
+          <router-link to="#">Contact</router-link>
+        </li>
+      </ul>
+    </header>
+  </Navbar>
+  <router-view />
+  <img class="app-coder" src="../../assets/coder.png" alt="coder" />
+  <Arrow></Arrow>
+  <Sidebar>
+    <div slot="sidebar">
+      <div slot="picture">
+        <img src="../../assets/salim.jpg" />
+      </div>
+      <div slot="name">
+        <h2>Anassifi</h2>
+        <h6>Web dev Student</h6>
+        <hr />
+      </div>
+      <div slot="commands">
+        <font-awesome-icon :icon="['fas' ,'user']" /> About me
+      </div>
+      <div slot="commands">
+        <font-awesome-icon :icon="['fas' ,'desktop']" /> Portfolio
+      </div>
+      <div slot="commands">
+        <font-awesome-icon :icon="['fas' ,'at']" /> Contact
+      </div>
+    </div>
+  </Sidebar>
+  <About>
+  </About>
+  <Portfolio></Portfolio>
+</div>

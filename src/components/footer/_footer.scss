@@ -1,0 +1,38 @@
+@import "../../styles/myStyles";
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: -12em;
+    height: 22em;
+    background-color: #52616b;
+
+    h4 {
+        color: $base-color;
+    }
+
+    a {
+        outline: none;
+        text-decoration: none;
+        color: $base-color;
+    }
+
+    a:active{
+        color: inherit;
+    }
+
+    img {
+        margin: .4em;
+        height: 2.5em;
+        width: 2.5em;
+    }
+}
+
+.goTop {
+    background-color: $fourth-color;
+    padding: 1em 1em;
+}

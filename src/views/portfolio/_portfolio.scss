@@ -1,0 +1,50 @@
+@import "../../styles/myStyles";
+
+.portfolio {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    position: relative;
+    top: -12em;
+    background-image: url("../../assets/myProjects\ background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50em;
+    width: 100%;
+
+    .background {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        background-image: url("../../assets/myProjects.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 40em;
+        width: 75%;
+
+        -webkit-box-shadow: 8px 12px 5px 0px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 8px 12px 5px 0px rgba(0, 0, 0, 0.1);
+        box-shadow: 8px 12px 5px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .jumbotron {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        background-color: $third-color;
+        height: 34em;
+        width: 80%;
+
+        .card {
+            display: flex;
+            justify-content: center;
+            align-self: center;
+        }
+
+        .dots {
+            position: absolute;
+            bottom: 9em;
+
+        }
+    }
+}

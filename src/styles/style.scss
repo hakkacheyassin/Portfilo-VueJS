@@ -1,0 +1,320 @@
+@import "common/common";
+
+$margins: (menu:(bottom: 50px));
+
+@function get-nested($parent, $child, $item) {
+    @return map-get(map-get($parent, $child, $item));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    @include themify($themes) {
+        color: themed("fgColor");
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+    @include themifyParent($themes) {
+        background-color: themed("bgColor");
+    }
+
+    font-family: 'Poppins',
+    sans-serif;
+    font-size: 16px;
+}
+
+header {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4.5rem 4rem;
+}
+
+@import "../components/components";
+
+//responsive mobile and smaller
+@media only screen and (max-width: 600px) {
+
+    //background shapes
+    .background-rec {
+        background-image: url(/img/shapes.1d2b1527.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: top right;
+    }
+
+    //navbar (Logo - nav links)
+    #nav-logo {
+        position: relative;
+        left: -1.5em;
+        top: 0;
+        height: 5em;
+        width: 5em;
+
+    }
+
+    #nav {
+        a {
+            @include flexIt;
+            text-decoration: none;
+            font-weight: bold;
+            color: #2c3e50;
+            padding: 0 .8em;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 1em;
+        }
+
+        ul {
+            padding: 0;
+        }
+    }
+
+
+    //titles
+
+    .home {
+
+        position: relative;
+        top: 2em;
+        left: 0;
+
+        .title h1 {
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 2rem;
+            color: #52616b;
+        }
+
+        .school h1 {
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 2rem;
+            color: #c9d6df;
+
+        }
+
+        .desc h1 {
+            font-family: "Open Sans", sans-serif;
+            font-weight: 300;
+            font-size: 1.8rem;
+            letter-spacing: 0.1em;
+            font-style: italic;
+            text-transform: uppercase;
+            color: #52616b;
+        }
+
+    }
+
+    .container {
+        position: relative;
+        width: 1em;
+        height: 1em;
+        top: 3em;
+        left: 17em;
+
+        .chevron {
+            width: 18px;
+            height: 6px;
+        }
+
+        .text {
+            font-size: 10px;
+        }
+    }
+
+    .app-coder {
+        position: relative;
+        top: 4.5em;
+        left: 0em;
+        height: auto;
+        width: 50%;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    #nav ul {
+        padding: 0;
+    }
+
+    .container {
+        position: relative;
+        top: 3em;
+        left: 12em;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .container {
+        left: 16em;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .container {
+        left: 15em;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .container {
+        left: 11em;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .container {
+        left: 12em;
+    }
+}
+
+//responsive tablet
+@media only screen and (min-width: 600px) and(max-width: 700px) {
+    .background-rec {
+        background-size: 80%;
+    }
+
+    #nav-logo {
+        width: 80%;
+    }
+
+    #nav a {
+        padding: .8em;
+        font-size: 1.2em;
+    }
+
+    .home {
+
+        position: relative;
+        top: 20em;
+        left: 0;
+
+    }
+
+    .container {
+        position: relative;
+        width: 1em;
+        height: 1em;
+        top: 0;
+        left: 17em;
+    }
+
+    .app-coder {
+        width: 50%;
+        left: 0;
+    }
+}
+
+@media only screen and (min-width: 700px) and(max-width: 900px) {
+    .container {
+        left: 21em;
+        top: 0em;
+    }
+
+    .home {
+        right: 0%;
+        top: 20em;
+    }
+
+    .app-coder {
+        left: 0;
+        width: 45%;
+    }
+}
+
+@media only screen and (min-width: 750px) and(max-width: 800px) {
+    .container {
+        left: 24em;
+        top: 0em;
+    }
+
+}
+
+
+@media only screen and (min-width: 850px) and(max-width: 900px) {
+    .container {
+        left: 27em;
+
+    }
+}
+
+//responsive for desktop
+@media only screen and (min-width: 900px) and(max-width: 1100px) {
+    .app-coder {
+        top: -10em;
+        left: 15em;
+        width: 30%;
+    }
+
+    .container {
+        top: -15em;
+
+    }
+
+    .home {
+        top: 3.5em;
+        left: -12em;
+
+        .title h1 {
+            font-size: 200%;
+        }
+
+        .school h1 {
+            font-size: 200%;
+        }
+
+        .desc h1 {
+            font-size: 200%;
+        }
+    }
+
+
+}
+
+@media only screen and (min-width: 1000px) and(max-width: 1100px) {
+    .home {
+        top: 3.5em;
+        left: -12em;
+
+        .title h1 {
+            font-size: 250%;
+        }
+
+        .school h1 {
+            font-size: 250%;
+        }
+
+        .desc h1 {
+            font-size: 250%;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1100px) and(max-width: 1200px) {
+
+    .app-coder {
+        top: -13em;
+        left: 18em;
+    }
+
+    .home {
+        right: 20%;
+        top: 5%;
+    }
+
+    .container {
+        top: -20em;
+        left: 20em;
+    }
+}
