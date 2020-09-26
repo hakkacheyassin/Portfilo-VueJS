@@ -1,0 +1,96 @@
+@import "../../styles/myStyles";
+
+.side-bar {
+  &.left {
+    position: fixed;
+    left: -20em;
+    top: 0;
+    bottom: 0;
+  }
+
+  width: 250px;
+  background-color: $second-color;
+  -webkit-box-shadow: 4px 2px 16px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 2px 16px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 4px 2px 16px 0px rgba(0, 0, 0, 0.75);
+
+  div[slot="commands"] {
+    position: relative;
+    top: 0;
+    left: 0.8em;
+    color: $fourth-color;
+    height: 2em;
+    width: 9em;
+    //font
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 1.5em;
+    padding: 0.2em 0.5em;
+    margin: 0.5em 0;
+    border-radius: 0.5em;
+
+    #text {
+      color: red;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: $base-color;
+      border-radius: 0.5em;
+      box-shadow: 4px 2px 10px 0px rgba(0, 0, 0, 0.75);
+    }
+  }
+
+  div[slot="picture"] {
+    position: relative;
+    top: 0.4em;
+    left: 4em;
+    height: 8em;
+    width: 8em;
+    background-color: $fourth-color;
+    border-radius: 50%;
+    margin-bottom: 10%;
+
+    img {
+      position: relative;
+      top: 0;
+      left: 0;
+      height: 8em;
+      width: 8em;
+      border-radius: 50%;
+    }
+
+    //box shadow
+    box-shadow: 4.5px -2px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4.5px -2px 4px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 4.5px -2px 4px rgba(0, 0, 0, 0.75);
+    -o-box-shadow: 4.5px -2px 4px rgba(0, 0, 0, 0.75);
+    border-radius: 50%;
+  }
+
+  div[slot="name"] {
+    h2 {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      color: $fourth-color;
+    }
+
+    h6 {
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      color: $fourth-color;
+      text-transform: uppercase;
+    }
+
+    hr {
+      width: 50%;
+      text-align: center;
+      margin-left: 4em;
+      margin-bottom: 10%;
+    }
+  }
+
+  body {
+    margin-left: 250px;
+  }
+}

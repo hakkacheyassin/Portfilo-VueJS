@@ -1,0 +1,70 @@
+@import "../../styles/myStyles";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+#nav {
+  padding: 0 30px;
+
+  ul {
+    list-style: none;
+    @include flexIt;
+    padding: 0 3rem;
+  }
+
+  a {
+    @include flexIt;
+    text-decoration: none;
+    font-weight: bold;
+    color: #2c3e50;
+    padding: 0 1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.4em;
+
+    &.router-link-exact-active {
+      color: #c9d6df;
+    }
+  }
+}
+
+#nav-logo {
+  height: auto;
+  max-width: 200px;
+  width: 100%;
+}
+
+.background-rec {
+  background-image: url("../../assets/shapes.png");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.shape {
+  position: relative;
+  top: 0;
+  left: 15em;
+  height: auto;
+  width: 56%;
+}
+
+.app-coder {
+  position: relative;
+  top: -12em;
+  left: 25em;
+  height: auto;
+  width: 30%;
+}
+
+

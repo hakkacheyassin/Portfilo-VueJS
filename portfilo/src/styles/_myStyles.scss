@@ -1,0 +1,13 @@
+//my palette
+$base-color: #f0f5f9;
+$second-color: #c9d6df;
+$third-color: #52616b;
+$fourth-color: #1e2022;
+
+@mixin flexIt {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
